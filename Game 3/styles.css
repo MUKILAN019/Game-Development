@@ -1,0 +1,19 @@
+.grid{
+    display: flex;
+    width:650px;
+    height: 600px;
+    flex-wrap:wrap;
+}
+
+.square{
+    height:200px;
+    width:200px;
+    border:black solid 1px;
+}
+
+.mole{
+    background-image: url('rat.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
