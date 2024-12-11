@@ -4,14 +4,11 @@ const result = document.getElementById('result');
 const scoreBoard = document.getElementById('scoreBoard');
 const resetButton = document.getElementById('reset');
 const possibleChoices = document.querySelectorAll('.button');
-
 let userChoices;
 let computerChoices;
 let userScore = 0;
 let computerScore = 0;
-
 const choices = ['rock','papper','scissor'];
-
 possibleChoices.forEach((choice) =>
   choice.addEventListener('click', (e) => {
     if (e.target.id !== 'reset') { 
@@ -23,13 +20,11 @@ possibleChoices.forEach((choice) =>
     }
   })
 );
-
 function generateComputerChoice() {
   const randomIndex = Math.floor(Math.random() * choices.length);
   computerChoices = choices[randomIndex];
   computerChoice.innerText = computerChoices;
 }
-
 function getResult() {
   if (computerChoices === userChoices) {
     result.innerText = "It's a Draw!";
@@ -45,11 +40,9 @@ function getResult() {
     computerScore++;
   }
 }
-
 function updateScoreboard() {
   scoreBoard.innerText = `Player: ${userScore} | Computer: ${computerScore}`;
 }
-
 resetButton.addEventListener('click', () => {
   userScore = 0;
   computerScore = 0;
@@ -58,6 +51,4 @@ resetButton.addEventListener('click', () => {
   result.innerText = '';
   updateScoreboard();
 });
-
-
 updateScoreboard();

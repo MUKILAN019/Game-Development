@@ -1,0 +1,13 @@
+#grid{
+  display: flex;
+  height: 400px;
+  width: 40%;
+  flex-wrap: wrap;
+  padding: 50px;
+  background-color: aquamarine;
+}
+#grid img{
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+}
